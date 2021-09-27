@@ -9,6 +9,17 @@ function arrToObj(array, callback) {
   return obj;
 }
 
+function arrToObj(array, callback) {
+  // ADD CODE HERE
+  const result = {};
+
+  for (let e of array) {
+    result[e] = callback(e);
+  }
+
+  return result;
+}
+
 // Uncomment these to check your work!
 const arrOfStrings = ["beer", "glue"];
 const capitalize = (str) => str.toUpperCase();
